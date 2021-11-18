@@ -12,6 +12,11 @@
  *
  *= require_tree .
  *= require_self
- */
+*/
 
- @import "bulma";
+$primary: #ffe8d5;
+$link: #0E9594;
+$info: #0E9594;
+
+@import "bulma";
+
