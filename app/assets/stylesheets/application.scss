@@ -26,7 +26,13 @@ $info: #0E9594;
     border-radius: 50%;
   }
 }
+.panel-icon {
+  border-radius: 50%;
+  img {
+    border-radius: 50%;
+  }
+}
 
-.panel-block {
+.post.panel-block {
   justify-content: space-between;
 }

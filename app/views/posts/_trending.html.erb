@@ -35,7 +35,7 @@
     </label>
 
     <% @posts.each do |post| %>
-      <a class="panel-block">
+      <%= link_to post, class: "post panel-block" do %>
         <span>
           <strong><%= post.title %></strong><br/>
           <small>c/Business</small>
@@ -50,7 +50,7 @@
             <span>5</span>
           </div>
         </div>
-      </a>
+      <% end %>
     <% end %>
   </nav>
 </div>
