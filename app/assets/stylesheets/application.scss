@@ -20,3 +20,13 @@ $info: #0E9594;
 
 @import "bulma";
 
+.image {
+  border-radius: 50%;
+  img {
+    border-radius: 50%;
+  }
+}
+
+.panel-block {
+  justify-content: space-between;
+}

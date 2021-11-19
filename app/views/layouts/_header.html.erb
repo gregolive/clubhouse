@@ -16,13 +16,41 @@
       <%= link_to root_path, class: "navbar-item" do %>
         <p class="navbar-item">Home</p>
       <% end %>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <p class="navbar-link">Clubs</p>
+        <div class="navbar-dropdown is-boxed">
+          <a class="navbar-item" href="">
+            Overview
+          </a>
+          <a class="navbar-item" href="">
+            Modifiers
+          </a>
+          <a class="navbar-item" href="">
+            Columns
+          </a>
+          <a class="navbar-item" href="">
+            Layout
+          </a>
+          <a class="navbar-item" href="">
+            Form
+          </a>
+          <hr class="navbar-divider">
+          <a class="navbar-item" href="">
+            Elements
+          </a>
+          <a class="navbar-item" href="">
+            Components
+          </a>
+        </div>
+      </div>
     </div>
 
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="field is-grouped">
           <p class="control">
-            <a class="button is-link" data-social-network="Twitter" data-social-action="tweet" data-social-target="https://bulma.io" target="_blank" href="https://twitter.com/intent/tweet?text=Bulma: a modern CSS framework based on Flexbox&amp;hashtags=bulmaio&amp;url=https://bulma.io&amp;via=jgthms">
+            <a class="button is-link" href="">
               <span class="icon">
                 <i class="fas fa-user-plus"></i>
               </span>
@@ -32,7 +60,7 @@
             </a>
           </p>
           <p class="control">
-            <a class="button is-primary" href="https://github.com/jgthms/bulma/releases/download/0.9.3/bulma-0.9.3.zip">
+            <a class="button is-primary" href="">
               <span class="icon">
                 <i class="fas fa-sign-in-alt"></i>
               </span>
