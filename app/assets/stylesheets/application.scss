@@ -20,24 +20,19 @@ $info: #0E9594;
 
 @import "bulma";
 
-.image {
-  border-radius: 50%;
-  img {
-    border-radius: 50%;
-  }
+.notification:not(:last-child) {
+  margin-bottom: 0;
 }
-.panel-icon {
-  border-radius: 50%;
-  img {
-    border-radius: 50%;
-  }
+
+.button.is-info.is-medium {
+  margin-bottom: 0.5em;
 }
 
 .post.panel-block {
   justify-content: space-between;
 }
 
-input[type="radio"] {
+input[type="radio"], input[type="checkbox"] {
   margin-right: 5px;
 }
 
