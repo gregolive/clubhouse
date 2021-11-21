@@ -36,3 +36,15 @@ $info: #0E9594;
 .post.panel-block {
   justify-content: space-between;
 }
+
+input[type="radio"] {
+  margin-right: 5px;
+}
+
+.radio {
+  width: 20%;
+}
+
+.radio + .radio {
+  margin-left: 0;
+}

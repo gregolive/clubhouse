@@ -1,41 +1,13 @@
 <div class="column is-one-quarter">
   <nav class="panel">
     <p class="panel-heading">Clubs</p>
-    <a class="panel-block">
-      <span class="panel-icon">
-        <img src="https://bulma.io/images/placeholders/32x32.png">
-      </span>
-      c/Business
-    </a>
-    <a class="panel-block">
-      <span class="panel-icon">
-        <img src="https://bulma.io/images/placeholders/32x32.png">
-      </span>
-      c/Cooking
-    </a>
-    <a class="panel-block">
-      <span class="panel-icon">
-        <img src="https://bulma.io/images/placeholders/32x32.png">
-      </span>
-      c/Music
-    </a>
-    <a class="panel-block">
-      <span class="panel-icon">
-        <img src="https://bulma.io/images/placeholders/32x32.png">
-      </span>
-      c/Science
-    </a>
-    <a class="panel-block">
-      <span class="panel-icon">
-        <img src="https://bulma.io/images/placeholders/32x32.png">
-      </span>
-      c/Sports
-    </a>
-    <a class="panel-block">
-      <span class="panel-icon">
-        <img src="https://bulma.io/images/placeholders/32x32.png">
-      </span>
-      c/Tech
-    </a>
+    <% Post::CLUBS.each do |club| %>
+      <%= link_to @post, class: "panel-block" do %>
+        <span class="panel-icon">
+          <img src="https://bulma.io/images/placeholders/32x32.png">
+        </span>
+        c/<%= club %>
+      <% end %>
+    <% end %>
   </nav>
 </div>
