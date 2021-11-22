@@ -42,24 +42,41 @@
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="field is-grouped">
-          <p class="control">
-            <a class="button is-link" href="">
-              <span class="icon">
-                <i class="fas fa-user-plus"></i>
-              </span>
-              <span>
-                Sign up
-              </span>
-            </a>
-          </p>
-          <p class="control">
-            <a class="button is-primary" href="">
-              <span class="icon">
-                <i class="fas fa-sign-in-alt"></i>
-              </span>
-              <span>Sign in</span>
-            </a>
-          </p>
+          <% if user_signed_in? %>
+            <p class="control">
+              <%= link_to edit_user_registration_path, class: "button is-info" do %>
+                <span class="icon">
+                  <i class="fas fa-user"></i>
+                </span>
+                <span>u/<%= current_user.username %></span>
+              <% end %>
+            </p>
+            <p class="control">
+              <%= link_to destroy_user_session_path, method: :delete, class: "button is-primary" do %>
+                <span class="icon">
+                  <i class="fas fa-sign-out-alt"></i>
+                </span>
+                <span>Logout</span>
+              <% end %>
+            </p>
+          <% else %>
+            <p class="control">
+              <%= link_to new_user_registration_path, class: "button is-info" do %>
+                <span class="icon">
+                  <i class="fas fa-user-plus"></i>
+                </span>
+                <span>Sign up</span>
+              <% end %>
+            </p>
+            <p class="control">
+              <%= link_to new_user_session_path, class: "button is-primary" do %>
+                <span class="icon">
+                  <i class="fas fa-sign-in-alt"></i>
+                </span>
+                <span>Sign in</span>
+              <% end %>
+            </p>
+          <% end %>
         </div>
       </div>
     </div>

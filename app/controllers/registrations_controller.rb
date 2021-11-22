@@ -1,4 +1,4 @@
-class RegistrationsController < Devise::Routing::RegistrationsController
+class RegistrationsController < Devise::RegistrationsController
 
 
 
