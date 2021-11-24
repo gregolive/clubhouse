@@ -68,4 +68,8 @@ class PostsController < ApplicationController
     def post_params
       params.require(:post).permit(:title, :club, :body)
     end
+
+    def post_author
+      @post.user_id
+    end
 end
