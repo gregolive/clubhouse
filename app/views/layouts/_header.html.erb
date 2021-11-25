@@ -20,21 +20,11 @@
       <div class="navbar-item has-dropdown is-hoverable">
         <p class="navbar-link">Clubs</p>
         <div class="navbar-dropdown is-boxed">
-          <a class="navbar-item" href="">
-            Business
-          </a>
-          <a class="navbar-item" href="">
-            Cooking
-          </a>
-          <a class="navbar-item" href="">
-            Movies
-          </a>
-          <a class="navbar-item" href="">
-            Music
-          </a>
-          <a class="navbar-item" href="">
-            Sports
-          </a>
+          <% Post::CLUBS.each do |club| %>
+            <%= link_to @post, class: "navbar-item" do %>
+              <%= club %>
+            <% end %>
+          <% end %>
         </div>
       </div>
     </div>
