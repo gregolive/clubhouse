@@ -1,5 +1,5 @@
 <div class="column is-half">
-
+  <% if user_signed_in? %>
     <article class="media box">
       <figure class="media-left">
         <p class="image is-64x64">
@@ -10,6 +10,7 @@
         <%= render 'posts/form' %>
       </div>
     </article>
+  <% end %>
 
   <% if @posts.any? %>
     <% @posts.each do |post| %>
@@ -26,7 +27,7 @@
                 <strong>c/<%= post.club %></strong>
               <% end %>
               <% if user_signed_in? %>
-                <p><small>u/<%= User.find(post.user_id).username rescue "[deleted]" %> · 
+                <p><small>u/<%= post.user.username rescue "[deleted]" %> · 
               <% else %>
                 <p><small>anon · 
               <% end %>
@@ -44,14 +45,14 @@
                 <% end %>
                 <%= link_to post , class: "level-item" do %>
                   <span class="icon"><i class="far fa-comment" aria-hidden="true"></i></span>
-                  <span>5</span>
+                  <span><%= post.comment_ids.count %></span>
                 <% end %>
               </div>
             </nav>
             
           </div>
 
-          <% if current_user == User.find(post.user_id) %>
+          <% if current_user == post.user %>
             <nav class="level">
               <div class="level-right is-mobile">
                 <%= link_to edit_post_path(post) , class: "level-item" do %>
