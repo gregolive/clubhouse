@@ -26,17 +26,22 @@
               <nav class="level">
                 <div class="level-left is-mobile">
                   <div class="level-item">
-                    <% pre_like = @post.likes.find { |like| like.user_id == current_user.id} %>
-                    <% if pre_like %>
-                      <%= link_to post_like_path(@post, pre_like), method: :delete, class: "level-item" do %>
-                        <span class="icon"><i class="fas fa-heart" aria-hidden="true"></i></span>
-                        <span><%= @post.likes.count %> <%= (@post.likes.count) == 1 ? 'Like' : 'Likes'%></span>
+                    <% if user_signed_in? %>
+                      <% pre_like = @post.likes.find { |like| like.user_id == current_user.id} %>
+                      <% if pre_like %>
+                        <%= link_to post_like_path(@post, pre_like), method: :delete, class: "level-item" do %>
+                          <span class="icon"><i class="fas fa-heart" aria-hidden="true"></i></span>
+                          <span><%= @post.likes.count %> <%= (@post.likes.count) == 1 ? 'Like' : 'Likes'%></span>
+                        <% end %>
+                      <% else %>
+                        <%= link_to post_likes_path(@post), method: :post, class: "level-item" do %>
+                          <span class="icon"><i class="far fa-heart" aria-hidden="true"></i></span>
+                          <span><%= @post.likes.count %> <%= (@post.likes.count) == 1 ? 'Like' : 'Likes'%></span>
+                        <% end %>
                       <% end %>
                     <% else %>
-                      <%= link_to post_likes_path(@post), method: :post, class: "level-item" do %>
-                        <span class="icon"><i class="far fa-heart" aria-hidden="true"></i></span>
-                        <span><%= @post.likes.count %> <%= (@post.likes.count) == 1 ? 'Like' : 'Likes'%></span>
-                      <% end %>
+                      <span class="icon"><i class="far fa-heart" aria-hidden="true"></i></span>
+                      <span><%= @post.likes.count %> <%= (@post.likes.count) == 1 ? 'Like' : 'Likes'%></span>
                     <% end %>
                   </div>
                 </div>

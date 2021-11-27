@@ -1,39 +1,6 @@
 <div class="column is-one-quarter">
   <nav class="panel">
     <p class="panel-heading">Top Posts</p>
-
-    <label class="panel-block">
-      <div class="dropdown is-hoverable">
-        <div class="dropdown-trigger">
-          <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
-            <span>All time</span>
-            <span class="icon is-small">
-              <i class="fas fa-angle-down" aria-hidden="true"></i>
-            </span>
-          </button>
-        </div>
-        <div class="dropdown-menu" id="dropdown-menu3" role="menu">
-          <div class="dropdown-content">
-            <a href="#" class="dropdown-item">
-              Today
-            </a>
-            <a href="#" class="dropdown-item">
-              This week
-            </a>
-            <a href="#" class="dropdown-item">
-              This month
-            </a>
-            <a href="#" class="dropdown-item">
-              This year
-            </a>
-            <a href="#" class="dropdown-item">
-              All time
-            </a>
-          </div>
-        </div>
-      </div>
-    </label>
-
     <% Like.popular.each do |like| %>
       <%= link_to like.post, class: "post panel-block" do %>
         <span>
