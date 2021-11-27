@@ -48,6 +48,22 @@
               <%= f.input :current_password, hint: "we need your current password to confirm your changes", required: true, input_html: { class: "input"}, wrapper: false, label_html: { class: "label" } %>
             </div>
         </div>
+
+        <div class="field">
+          <div class="file has-name">
+            <label class="file-label">
+              <%= f.file_field :avatar, class:"file-input" %>
+              <span class="file-cta">
+                <span class="file-icon">
+                  <i class="fas fa-upload"></i>
+                </span>
+                <span class="file-label">
+                  Upload an avatar…
+                </span>
+              </span>
+            </label>
+          </div>
+        </div>
    
         <%= f.button :submit, "Update", class:"button is-info" %>
      
