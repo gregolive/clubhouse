@@ -48,3 +48,7 @@ input[type="radio"], input[type="checkbox"] {
   display: flex;
   gap: 10px;
 }
+
+.level:not(:last-child) {
+  margin-bottom: 1em;
+}
