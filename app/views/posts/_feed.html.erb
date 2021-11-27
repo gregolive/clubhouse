@@ -90,5 +90,14 @@
         </article>
       </div>
     <% end %>
+  <% else %>
+    <div class="box">
+      No posts yet. 
+      <% if user_signed_in? %>
+        Make the first post now from above!
+      <% else %>
+        <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "log in", new_user_session_path %> to make the first post!
+      <% end %>
+    </div>
   <% end %>
 </div>

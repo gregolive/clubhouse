@@ -1,23 +1,27 @@
 <div class="column is-one-quarter">
   <nav class="panel">
     <p class="panel-heading">Top Posts</p>
-    <% Like.popular.each do |like| %>
-      <%= link_to like.post, class: "post panel-block" do %>
-        <span>
-          <strong><%= like.post.title %></strong><br/>
-          <small>c/<%= like.post.club %></small>
-        </span>
-        <div class="level-right is-mobile">
-          <div class="level-item">
-            <span class="icon"><i class="far fa-heart" aria-hidden="true"></i></span>
-            <span><%= like.post.likes.count %></span>
+    <% if Like.popular.any? %>
+      <% Like.popular.each do |like| %>
+        <%= link_to like.post, class: "post panel-block" do %>
+          <span>
+            <strong><%= like.post.title %></strong><br/>
+            <small>c/<%= like.post.club %></small>
+          </span>
+          <div class="level-right is-mobile">
+            <div class="level-item">
+              <span class="icon"><i class="far fa-heart" aria-hidden="true"></i></span>
+              <span><%= like.post.likes.count %></span>
+            </div>
+            <div class="level-item">
+              <span class="icon"><i class="far fa-comment" aria-hidden="true"></i></span>
+              <span><%= like.post.comments.count %></span>
+            </div>
           </div>
-          <div class="level-item">
-            <span class="icon"><i class="far fa-comment" aria-hidden="true"></i></span>
-            <span><%= like.post.comments.count %></span>
-          </div>
-        </div>
+        <% end %>
       <% end %>
+    <% else %>
+      <div class="panel-block">Nothing here :(</div>
     <% end %>
   </nav>
 </div>
