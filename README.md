@@ -1,24 +1,20 @@
-# README
+# Clubhouse
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A social-media-like app that allows users to create an account and make posts about one ot their favorite topics (clubs).
 
-Things you may want to cover:
+## Live demo
 
-* Ruby version
+Avaliable via [Heroku](https://dashboard.heroku.com/apps/blooming-beach-64816) 👈
 
-* System dependencies
+## Features
 
-* Configuration
+- RESTful design
+- CRUD (or partial CRUD) operations for users, posts, comments, and likes
+- User authentication via Devise gem
+- Active storage for user avatars
+- Styling via Bulma gem
+- Member exclusive (post author and their avatars only visible to signed in users)
 
-* Database creation
+## Ruby version
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+2.7.4
