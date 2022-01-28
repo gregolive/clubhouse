@@ -1,6 +1,6 @@
 # Clubhouse
 
-A social-media-like app that allows users to create an account and make posts about one ot their favorite topics (clubs).
+A social-media-like app that allows users to create an account and make posts about one of their favorite topics (clubs).
 
 ## Live demo
 
