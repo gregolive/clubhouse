@@ -4,7 +4,7 @@ A social-media-like app that allows users to create an account and make posts ab
 
 ## Live demo
 
-Avaliable via [Heroku](https://dashboard.heroku.com/apps/blooming-beach-64816) 👈
+Avaliable via [Heroku](https://blooming-beach-64816.herokuapp.com/) 👈
 
 ## Features
 
